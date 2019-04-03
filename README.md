@@ -6,7 +6,7 @@ Works with sfinv and default formspec.
 (do not use it as storage for your item, you will lose your item on disconnect!)
 
 
-Depends on default and sfinv.
+Depends on default (sfinv optional).
 
 
 Code licensed as GPLv3 (see file LICENSE)  

@@ -30,7 +30,7 @@ minetest.create_detached_inventory("survival_pulverizer", {
 }):set_size("main", 1)
 
 if pulverizer.enabled then
-    if sfinv.enabled then
+    if sfinv and sfinv.enabled then
         local get_old = sfinv.pages["sfinv:crafting"].get
         sfinv.pages["sfinv:crafting"].get = function(self, player, context)
             return get_old(self, player, context) .. pulverizer.get_addon(pulverizer.sfinv_offset)
