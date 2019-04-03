@@ -16,11 +16,8 @@ pulverizer.get_addon = function(offset)
 end
 
 minetest.create_detached_inventory("survival_pulverizer", {
-	on_put = function(inv, listname, index, stack, player)
-		local size = inv:get_size(listname)
-        local list = inv:get_list(listname)
-        local itemstack = inv:get_stack(listname, 1)
-        pulverizer.item[player:get_player_name()] = itemstack
+    on_put = function(inv, listname, index, stack, player)
+        pulverizer.item[player:get_player_name()] = inv:get_stack(listname, 1)
 	end,
     on_take = function(inv, listname, index, stack, player)
         if inv:get_stack(listname, 1):is_empty() then
